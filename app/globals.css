@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sora: "Sora", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  --font-cormorant: "Cormorant Garamond", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f4efe7;
+  color: #2c2527;
+  font-family: var(--font-inter);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Tipografia base */
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-sora);
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer components {
+  .container-lume {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-bordo;
+  }
+
+  .accent {
+    font-family: var(--font-cormorant);
+    font-style: italic;
+    font-weight: 500;
+  }
+
+  /* Botão primário (bordô) */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-bordo px-7 py-4 text-sm font-semibold text-offwhite
+    shadow-glow transition-all duration-300 hover:-translate-y-0.5 hover:bg-bordo-soft active:translate-y-0;
+  }
+
+  /* Botão secundário (contorno) */
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-grafite/15 bg-transparent px-7 py-4
+    text-sm font-semibold text-grafite transition-all duration-300 hover:border-bordo hover:text-bordo;
+  }
+
+  .hairline {
+    @apply h-px w-full bg-gradient-to-r from-transparent via-rose to-transparent;
+  }
+
+  .card-soft {
+    @apply rounded-3xl border border-rose/50 bg-cream/80 backdrop-blur-sm shadow-soft;
+  }
+}
+
+/* Esconde scrollbar em trilhos horizontais decorativos */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Grão sutil para profundidade premium em fundos bordô */
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.05) 1px,
+    transparent 1px
+  );
+  background-size: 4px 4px;
+}
