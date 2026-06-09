@@ -60,9 +60,9 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${sora.variable} ${inter.variable} ${cormorant.variable}`}
+      className={`${sora.variable} ${inter.variable} ${cormorant.variable} overflow-x-hidden`}
     >
-      <body>{children}</body>
+      <body className="overflow-x-hidden bg-offwhite text-grafite antialiased">{children}</body>
     </html>
   );
 }
