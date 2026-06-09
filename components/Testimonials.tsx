@@ -1,6 +1,8 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
 import Reveal from "./Reveal";
 import SectionLabel from "./SectionLabel";
 
@@ -14,6 +16,8 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
+  const [activeStory, setActiveStory] = useState<string | null>(null);
+
   return (
     <section className="bg-cream py-20 sm:py-28 overflow-hidden">
       <div className="container-lume">
@@ -25,7 +29,7 @@ export default function Testimonials() {
               <span className="accent text-bordo">experiência premium.</span>
             </h2>
             <p className="mt-5 text-grafite/70">
-              Deslize para ver os resultados e o impacto que uma página profissional tem gerado para quem confiou na Lume.
+              Deslize para ver os resultados e o impacto que uma página profissional tem gerado para quem confiou na Lume. Clique nas imagens para ampliar.
             </p>
           </div>
         </Reveal>
@@ -36,7 +40,8 @@ export default function Testimonials() {
               {testimonials.map((t) => (
                 <div
                   key={t.id}
-                  className="relative w-[280px] shrink-0 snap-center sm:w-[320px] shadow-card rounded-2xl overflow-hidden transition-transform duration-300 hover:-translate-y-1"
+                  onClick={() => setActiveStory(t.src)}
+                  className="relative w-[280px] shrink-0 snap-center sm:w-[320px] shadow-card rounded-2xl overflow-hidden transition-transform duration-300 hover:-translate-y-1 cursor-pointer"
                 >
                   <Image
                     src={t.src}
@@ -52,6 +57,45 @@ export default function Testimonials() {
           </Reveal>
         </div>
       </div>
+
+      <AnimatePresence>
+        {activeStory && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setActiveStory(null)}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 sm:p-8 backdrop-blur-sm"
+          >
+            <button
+              onClick={() => setActiveStory(null)}
+              className="absolute right-4 top-4 z-50 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-md transition-colors hover:bg-white/20 sm:right-8 sm:top-8"
+              aria-label="Fechar"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M18 6L6 18M6 6l12 12" />
+              </svg>
+            </button>
+            
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.9, opacity: 0, y: 20 }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              onClick={(e) => e.stopPropagation()}
+              className="relative h-[85vh] w-full max-w-[500px] overflow-hidden rounded-2xl bg-black"
+            >
+              <Image
+                src={activeStory}
+                alt="Story ampliado"
+                fill
+                className="object-contain"
+                priority
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
