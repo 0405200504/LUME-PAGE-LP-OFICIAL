@@ -5,12 +5,12 @@ import Reveal from "./Reveal";
 import SectionLabel from "./SectionLabel";
 
 const testimonials = [
-  { id: 1, src: "/depoimentos/1.jpg" },
-  { id: 2, src: "/depoimentos/2.jpg" },
-  { id: 3, src: "/depoimentos/3.jpg" },
-  { id: 4, src: "/depoimentos/4.jpg" },
-  { id: 5, src: "/depoimentos/5.jpg" },
-  { id: 6, src: "/depoimentos/6.jpg" },
+  { id: 1, src: "/depoimentos/1.png" },
+  { id: 2, src: "/depoimentos/2.png" },
+  { id: 3, src: "/depoimentos/3.png" },
+  { id: 4, src: "/depoimentos/4.png" },
+  { id: 5, src: "/depoimentos/5.png" },
+  { id: 6, src: "/depoimentos/6.png" },
 ];
 
 export default function Testimonials() {
