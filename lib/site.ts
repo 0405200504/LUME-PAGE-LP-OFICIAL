@@ -6,8 +6,7 @@
 // Mensagem pré-preenchida do WhatsApp
 const WHATSAPP_MESSAGE = "Oi, quero minha página da Lume em 24h";
 
-// Número no formato internacional, somente dígitos (ex.: 55 + DDD + número)
-export const WHATSAPP_NUMBER = "5500000000000";
+export const WHATSAPP_NUMBER = "5515997507988";
 
 export const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
   WHATSAPP_MESSAGE
