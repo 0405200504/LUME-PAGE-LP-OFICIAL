@@ -4,7 +4,7 @@
  */
 
 // Mensagem pré-preenchida do WhatsApp
-const WHATSAPP_MESSAGE = "Oi, quero minha página da Lume em 24h";
+const WHATSAPP_MESSAGE = "Oii, gostaria de saber mais!";
 
 export const WHATSAPP_NUMBER = "5515997507988";
 
