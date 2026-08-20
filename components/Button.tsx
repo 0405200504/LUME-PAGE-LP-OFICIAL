@@ -1,12 +1,12 @@
 import type { ReactNode } from "react";
-import { WHATSAPP_LINK } from "@/lib/site";
+import { CTA_LINK } from "@/lib/site";
 
 type ButtonProps = {
   children: ReactNode;
   href?: string;
   variant?: "primary" | "ghost";
   className?: string;
-  /** quando true (padrão para primary), aponta para o WhatsApp da Lume */
+  /** quando true (padrão para primary), aponta para o CTA de conversão da Lume */
   whatsapp?: boolean;
 };
 
@@ -25,7 +25,9 @@ export default function Button({
   className = "",
   whatsapp = variant === "primary",
 }: ButtonProps) {
-  const target = whatsapp ? WHATSAPP_LINK : href ?? "#";
+  const target = whatsapp ? CTA_LINK : href ?? "#";
+  // o ícone do WhatsApp só aparece enquanto o CTA realmente abrir o WhatsApp
+  const showWhatsIcon = whatsapp && target.includes("wa.me");
   const isExternal = target.startsWith("http");
   const classes =
     variant === "primary" ? "btn-primary" : "btn-ghost";
@@ -38,7 +40,7 @@ export default function Button({
         ? { target: "_blank", rel: "noopener noreferrer" }
         : {})}
     >
-      {whatsapp && <WhatsIcon />}
+      {showWhatsIcon && <WhatsIcon />}
       {children}
     </a>
   );

@@ -36,10 +36,9 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.05 }}
             className="mt-5 font-sora text-4xl font-semibold leading-[1.08] text-grafite sm:text-5xl lg:text-[3.5rem]"
           >
-            Sua cliente quer agendar.
+            Sua cliente não quer conversar.
             <br />
-            Facilite o caminho{" "}
-            <span className="accent text-bordo">para ela.</span>
+            <span className="accent text-bordo">Ela quer agendar.</span>
           </motion.h1>
 
           <motion.p
@@ -48,8 +47,12 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="mt-6 max-w-xl text-base leading-relaxed text-grafite/70 sm:text-lg"
           >
-            Tenha uma página profissional com agendamento integrado em até <strong className="font-semibold text-grafite">24 horas</strong>. 
-            Sua cliente agenda sozinha, sua agenda fica organizada e você ganha tempo para o que importa: atender bem.
+            O Lume transforma o link da sua bio numa página que mostra seus
+            serviços, seus preços e seus horários — e deixa a cliente agendar
+            sozinha, em{" "}
+            <strong className="font-semibold text-grafite">40 segundos</strong>,
+            sem passar pelo seu direct. Você só recebe o aviso de horário
+            marcado.
           </motion.p>
 
           <motion.div
@@ -58,9 +61,9 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.25 }}
             className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center"
           >
-            <Button>Quero minha página em 24h</Button>
-            <Button href="#como-funciona" variant="ghost" whatsapp={false}>
-              Ver como funciona
+            <Button>Testar 7 dias grátis</Button>
+            <Button href="#o-que-ela-ve" variant="ghost" whatsapp={false}>
+              Ver uma página de exemplo →
             </Button>
           </motion.div>
 
@@ -70,8 +73,8 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.4 }}
             className="mt-4 max-w-md text-sm text-grafite/55"
           >
-            Para profissionais da estética que querem transformar o link da bio
-            em uma agenda mais organizada.
+            Sem cartão de crédito. Sem fidelidade. Sua página no ar em 10
+            minutos.
           </motion.p>
         </div>
 

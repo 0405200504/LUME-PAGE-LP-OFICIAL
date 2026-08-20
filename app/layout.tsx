@@ -26,21 +26,22 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Lume — Sua página de agendamento pronta em 24h | Estética",
+  title: "Lume — Sua cliente não quer conversar. Ela quer agendar.",
   description:
-    "A Lume cria em até 24 horas uma página profissional com agendamento integrado para profissionais da estética venderem mais, organizarem a agenda e pararem de depender do WhatsApp para tudo.",
+    "O Lume transforma o link da sua bio numa página com seus serviços, preços e horários — e deixa a cliente agendar sozinha, sem passar pelo seu direct. 7 dias grátis, sem cartão.",
   keywords: [
-    "landing page estética",
-    "agendamento online",
-    "página para manicure",
-    "página para lash designer",
-    "link da bio profissional",
-    "site para esteticista",
+    "agendamento online estética",
+    "link da bio com agendamento",
+    "agenda para lash designer",
+    "sistema para manicure",
+    "software para esteticista",
+    "agendamento pelo Instagram",
+    "lembrete de agendamento WhatsApp",
   ],
   openGraph: {
-    title: "Lume — Presença digital pronta para converter",
+    title: "Lume — Sua cliente não quer conversar. Ela quer agendar.",
     description:
-      "Página profissional com agendamento integrado em até 24 horas para profissionais da estética.",
+      "Sua vitrine, sua agenda e seu WhatsApp no mesmo link. A cliente agenda sozinha em 40 segundos. 7 dias grátis, sem cartão.",
     type: "website",
     locale: "pt_BR",
   },

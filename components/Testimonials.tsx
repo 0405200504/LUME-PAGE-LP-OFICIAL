@@ -23,13 +23,13 @@ export default function Testimonials() {
       <div className="container-lume">
         <Reveal>
           <div className="mx-auto max-w-2xl text-center">
-            <SectionLabel>O que dizem sobre nós</SectionLabel>
+            <SectionLabel>Depoimentos</SectionLabel>
             <h2 className="mt-4 font-sora text-3xl font-semibold leading-tight text-grafite sm:text-4xl">
-              Profissionais que já estão vivendo a{" "}
-              <span className="accent text-bordo">experiência premium.</span>
+              Quem trocou o direct{" "}
+              <span className="accent text-bordo">pelo link.</span>
             </h2>
             <p className="mt-5 text-grafite/70">
-              Deslize para ver os resultados e o impacto que uma página profissional tem gerado para quem confiou na Lume. Clique nas imagens para ampliar.
+              Deslize para ver o que mudou na rotina de quem parou de responder preço e horário no direct. Clique nas imagens para ampliar.
             </p>
           </div>
         </Reveal>

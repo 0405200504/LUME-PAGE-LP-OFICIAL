@@ -17,21 +17,37 @@ export default function FinalCTA() {
               Pronta para começar
             </p>
             <h2 className="mx-auto mt-5 max-w-3xl font-sora text-3xl font-semibold leading-tight sm:text-[2.6rem]">
-              Sua agenda mais inteligente e profissional{" "}
-              <span className="accent text-rose">começa aqui.</span>
+              Amanhã de manhã, uma cliente vai clicar{" "}
+              <span className="accent text-rose">no link da sua bio.</span>
             </h2>
-            <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-offwhite/80 sm:text-lg">
-              Fale com nossa equipe e tenha sua página no ar amanhã. Mais organização para você, mais facilidade para sua cliente.
-            </p>
+
+            <div className="mx-auto mt-7 max-w-xl space-y-4 text-base leading-relaxed text-offwhite/80 sm:text-lg">
+              <p className="font-medium text-offwhite">
+                A única pergunta é o que vai acontecer depois.
+              </p>
+              <p>
+                Ou ela cai no seu direct, espera você ter uma mão livre, pergunta
+                o preço, pensa, esfria e some.
+              </p>
+              <p>
+                Ou ela vê seu trabalho, vê o preço, escolhe o horário de sábado
+                às 14h e recebe a confirmação no WhatsApp — enquanto você está
+                atendendo outra pessoa, sem saber de nada.
+              </p>
+              <p className="font-medium text-offwhite">
+                Leva 10 minutos pra mudar isso. E os 7 primeiros dias são por
+                nossa conta.
+              </p>
+            </div>
 
             <div className="mt-9 flex justify-center">
               <Button className="bg-offwhite !text-bordo hover:bg-cream">
-                Quero minha página em 24h
+                Criar minha página grátis
               </Button>
             </div>
 
             <p className="mt-4 text-sm text-offwhite/65">
-              Clique no botão e fale com a Lume pelo WhatsApp.
+              7 dias grátis · Sem cartão · Sem fidelidade · No ar hoje
             </p>
           </div>
         </Reveal>

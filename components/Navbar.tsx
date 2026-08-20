@@ -5,10 +5,10 @@ import Logo from "./Logo";
 import Button from "./Button";
 
 const links = [
-  { label: "A dor", href: "#dor" },
+  { label: "A conta", href: "#a-conta" },
   { label: "Como funciona", href: "#como-funciona" },
   { label: "Painel", href: "#painel" },
-  { label: "Para quem é", href: "#para-quem" },
+  { label: "Planos", href: "#planos" },
   { label: "Perguntas", href: "#faq" },
 ];
 
@@ -48,7 +48,7 @@ export default function Navbar() {
         </div>
 
         <Button className="hidden px-5 py-2.5 sm:inline-flex">
-          Quero minha página
+          Testar 7 dias grátis
         </Button>
       </nav>
     </header>

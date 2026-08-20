@@ -2,21 +2,16 @@ import Reveal from "./Reveal";
 import SectionLabel from "./SectionLabel";
 
 const paraVoce = [
-  "Você atende clientes na área da estética",
-  "Você usa o Instagram para atrair clientes",
-  "Você recebe perguntas repetidas todos os dias",
-  "Você quer facilitar o agendamento",
-  "Você sente que sua bio não converte",
-  "Você quer uma estrutura mais profissional",
-  "Você não tem tempo para criar site sozinha",
-  "Você quer algo bonito, simples e pronto rápido",
+  "Você atende com hora marcada e agenda pelo Instagram ou WhatsApp",
+  "Você é lash designer, esteticista, designer de sobrancelhas, manicure, micropigmentadora, massoterapeuta — ou tem uma clínica pequena",
+  "Você já perdeu cliente por demorar pra responder",
+  "Você quer parar de misturar caderno, print e memória",
 ];
 
 const naoEhParaVoce = [
-  "Você não usa o Instagram para vender",
-  "Você não quer organizar sua agenda",
-  "Você não está disposta a melhorar a experiência da cliente",
-  "Você prefere continuar atendendo tudo manualmente",
+  "Você atende só por ordem de chegada, sem horário marcado",
+  "Você não quer que a cliente veja seu preço antes de falar com você",
+  "Você prefere negociar cada atendimento no 1x1",
 ];
 
 function Check() {
@@ -42,7 +37,8 @@ export default function ForWho() {
           <div className="mx-auto max-w-2xl text-center">
             <SectionLabel>Para quem é</SectionLabel>
             <h2 className="mt-4 font-sora text-3xl font-semibold leading-tight text-grafite sm:text-4xl">
-              A Lume é para você se…
+              O Lume é{" "}
+              <span className="accent text-bordo">pra você se…</span>
             </h2>
           </div>
         </Reveal>
@@ -53,7 +49,7 @@ export default function ForWho() {
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-bordo">
                 Feita para você
               </p>
-              <ul className="mt-6 grid gap-3.5 sm:grid-cols-2">
+              <ul className="mt-6 grid gap-3.5">
                 {paraVoce.map((p) => (
                   <li key={p} className="flex items-start gap-3">
                     <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-bordo text-offwhite">

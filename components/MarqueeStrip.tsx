@@ -1,11 +1,11 @@
 import Sparkle from "./Sparkle";
 
 const phrases = [
-  "Seu Instagram atrai. Sua estrutura precisa converter.",
-  "Cliente confusa não agenda. Cliente segura, sim.",
-  "O problema não é falta de interesse. É excesso de atrito.",
-  "Organização também vende.",
-  "Você não precisa de mais mensagens. Precisa de mais agendamentos.",
+  "Sua cliente não quer conversar. Ela quer agendar.",
+  "Você não perde cliente por preço. Perde por demora.",
+  "O link da sua bio não foi feito pra vender.",
+  "Toda pergunta do direct já está respondida na página.",
+  "Você não abriu esse negócio pra ser secretária de si mesma.",
 ];
 
 export default function MarqueeStrip() {

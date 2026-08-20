@@ -1,26 +1,23 @@
 import Reveal from "./Reveal";
 import SectionLabel from "./SectionLabel";
+import Sparkle from "./Sparkle";
+import Button from "./Button";
 
 const passos = [
   {
     n: "1",
-    titulo: "Criamos sua página profissional",
-    desc: "Com seus serviços, fotos, informações, localização, diferenciais, depoimentos e botão de agendamento.",
+    titulo: "Você monta sua página",
+    desc: "Sobe suas fotos, escreve seus serviços, define preços e os dias que atende. É preencher formulário, não é “criar site”.",
   },
   {
     n: "2",
-    titulo: "Integramos seu sistema de agenda",
-    desc: "Sua cliente escolhe o serviço, o dia e o horário sem precisar depender de conversa manual.",
+    titulo: "Você troca o link da bio",
+    desc: "Copia o link do Lume, cola na bio do Instagram. Pronto: seu perfil virou um lugar onde se compra, não onde se pergunta.",
   },
   {
     n: "3",
-    titulo: "Você gerencia tudo em um painel simples",
-    desc: "Agendamentos, clientes, tarefas, serviços e finanças em um só lugar.",
-  },
-  {
-    n: "4",
-    titulo: "Você coloca o link na bio e começa a usar",
-    desc: "Sem precisar entender de tecnologia. Sem esperar semanas. Sem contratar agência cara.",
+    titulo: "Você atende. O Lume vende.",
+    desc: "A cliente entra, escolhe, agenda e recebe confirmação. Você recebe o aviso e vê tudo organizado no painel.",
   },
 ];
 
@@ -32,10 +29,8 @@ export default function HowItWorks() {
           <div className="max-w-3xl">
             <SectionLabel>Simples de começar</SectionLabel>
             <h2 className="mt-4 font-sora text-3xl font-semibold leading-tight text-grafite sm:text-4xl">
-              Nós fazemos o trabalho técnico para você{" "}
-              <span className="accent text-bordo">
-                focar nos seus atendimentos.
-              </span>
+              Do zero ao primeiro agendamento em{" "}
+              <span className="accent text-bordo">10 minutos.</span>
             </h2>
           </div>
         </Reveal>
@@ -44,7 +39,7 @@ export default function HowItWorks() {
           {/* linha horizontal conectando os passos (desktop) */}
           <div className="absolute left-0 right-0 top-7 hidden h-px bg-gradient-to-r from-rose via-bordo/40 to-rose lg:block" />
 
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {passos.map((p, i) => (
               <Reveal key={p.n} delay={i * 0.1}>
                 <div className="relative">
@@ -62,6 +57,24 @@ export default function HowItWorks() {
             ))}
           </div>
         </div>
+
+        <Reveal delay={0.15}>
+          <div className="mt-14 flex items-center justify-center gap-3 rounded-3xl border border-bordo/15 bg-offwhite px-7 py-7 text-center">
+            <Sparkle size={16} className="hidden shrink-0 text-bordo sm:block" />
+            <p className="font-sora text-base font-medium text-grafite sm:text-lg">
+              Sem instalar nada. Sem saber de tecnologia. Sem contratar ninguém.
+            </p>
+          </div>
+        </Reveal>
+
+        <Reveal delay={0.2}>
+          <div className="mt-8 flex flex-col items-center">
+            <Button>Quero minha agenda no ar</Button>
+            <p className="mt-3 text-xs text-grafite/50">
+              7 dias grátis · Sem cartão · Sem fidelidade
+            </p>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

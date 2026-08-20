@@ -7,37 +7,51 @@ import SectionLabel from "./SectionLabel";
 
 const faqs = [
   {
-    q: "A página fica pronta mesmo em 24 horas?",
-    a: "Sim. Após o envio das informações necessárias, a Lume cria sua página com agendamento integrado em até 24 horas.",
+    q: "Vou ter que aprender a mexer em mais um sistema?",
+    a: "Você preenche seus serviços e seus horários uma vez. Depois disso, o sistema trabalha e você só olha a agenda. Quem monta a página costuma levar cerca de 10 minutos. Se travar, a gente te ajuda a montar.",
   },
   {
-    q: "Preciso saber mexer com tecnologia?",
-    a: "Não. A estrutura é pensada para ser simples. Você recebe tudo pronto para usar.",
+    q: "E se minha cliente não souber usar?",
+    a: "Ela usa iFood, Uber e Shopee. A página tem três telas: escolher serviço, escolher horário, confirmar. É mais simples que pedir comida.",
   },
   {
-    q: "Funciona para qualquer área da estética?",
-    a: "Sim. A página pode ser adaptada para manicure, lash, sobrancelha, estética facial, corporal, micropigmentação, clínica e outros serviços.",
+    q: "Eu gosto de falar com minha cliente antes.",
+    a: "Continue falando. O Lume tira do seu direct só o que é burocracia — preço, horário e confirmação. Sobra tempo pra conversa que interessa: a que cria vínculo e faz ela voltar.",
   },
   {
-    q: "Posso colocar meu link na bio do Instagram?",
-    a: "Sim. A página foi feita justamente para transformar o link da bio em um caminho direto para o agendamento.",
+    q: "Minha agenda é bagunçada, meus horários mudam toda hora.",
+    a: "Por isso existe bloqueio e folga. Você fecha o dia ou o horário que não vai atender e ninguém consegue marcar ali. Sua exceção vira regra do sistema.",
   },
   {
-    q: "A cliente agenda sem falar comigo?",
-    a: "Sim. Ela consegue ver as informações, escolher serviço, dia e horário disponíveis.",
+    q: "Já tenho um linktree.",
+    a: "O linktree mostra links. O Lume fecha agendamento. Um manda a cliente embora pra outro app, o outro resolve ali mesmo.",
   },
   {
-    q: "Eu consigo gerenciar meus agendamentos?",
-    a: "Sim. Você terá acesso a um painel para acompanhar e organizar sua rotina.",
+    q: "E se eu quiser sair depois?",
+    a: "Sai. Sem multa e sem fidelidade. E leva sua base de clientes.",
   },
   {
-    q: "A página funciona no celular?",
-    a: "Sim. A experiência é totalmente otimizada para mobile, já que a maioria das clientes vem do Instagram.",
+    q: "Preciso colocar cartão pra testar?",
+    a: "Não. Você cria a conta, usa 7 dias com tudo liberado e só decide depois.",
   },
-  {
-    q: "Posso personalizar com minhas cores, fotos e serviços?",
-    a: "Sim. A página é construída com base na identidade da profissional.",
-  },
+
+  /* ------------------------------------------------------------------
+   * TODO — 2 objeções do documento de copy que dependem de informação
+   * que só você tem sobre o produto. Preencha a resposta e descomente:
+   *
+   * {
+   *   q: "Funciona pra clínica com mais de uma profissional?",
+   *   a: "[Responder conforme o produto suporta hoje. Se suportar, é
+   *       argumento forte pro Premium. Se ainda não suportar, diga que
+   *       está no roteiro e NÃO prometa data.]",
+   * },
+   * {
+   *   q: "Como funcionam os disparos no WhatsApp?",
+   *   a: "[Explicar em uma frase simples, sem termo técnico: se é pelo
+   *       número da profissional, o que precisa conectar e quais são os
+   *       limites por plano.]",
+   * },
+   * ------------------------------------------------------------------ */
 ];
 
 function Item({
@@ -102,8 +116,8 @@ export default function FAQ() {
           <div className="mx-auto max-w-2xl text-center">
             <SectionLabel>Perguntas frequentes</SectionLabel>
             <h2 className="mt-4 font-sora text-3xl font-semibold leading-tight text-grafite sm:text-4xl">
-              Ainda com uma{" "}
-              <span className="accent text-bordo">dúvida?</span>
+              Ainda com um{" "}
+              <span className="accent text-bordo">“sim, mas…”?</span>
             </h2>
           </div>
         </Reveal>
